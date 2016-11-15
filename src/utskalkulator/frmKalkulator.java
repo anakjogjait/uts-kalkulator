@@ -3,8 +3,8 @@ import javax.swing.JTextField;
 
 public class frmKalkulator extends javax.swing.JDialog {
     private String tmp = "";
-    private int a1,a2;
-    private float hasil;
+    private int pilih;
+    private float a1,a2,hasil;
     
     public frmKalkulator(java.awt.Frame parent, boolean modal) {
         super(parent, "KALKULATOR");
@@ -68,6 +68,11 @@ public class frmKalkulator extends javax.swing.JDialog {
         });
 
         btnTambah.setText("+");
+        btnTambah.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTambahActionPerformed(evt);
+            }
+        });
 
         btnEmpat.setText("4");
         btnEmpat.addActionListener(new java.awt.event.ActionListener() {
@@ -91,6 +96,11 @@ public class frmKalkulator extends javax.swing.JDialog {
         });
 
         btnKurang.setText("-");
+        btnKurang.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKurangActionPerformed(evt);
+            }
+        });
 
         btnTujuh.setText("7");
         btnTujuh.addActionListener(new java.awt.event.ActionListener() {
@@ -290,7 +300,22 @@ public class frmKalkulator extends javax.swing.JDialog {
         a1=0;
         a2=0;
         hasil=0;
+        txtTampil.setText("");
     }//GEN-LAST:event_btnBersihActionPerformed
+
+    private void btnTambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTambahActionPerformed
+        a1 = Float.valueOf(tmp);
+        pilih = 1;
+        tmp = "";
+        txtTampil.setText("+");
+    }//GEN-LAST:event_btnTambahActionPerformed
+
+    private void btnKurangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKurangActionPerformed
+        a1 = Float.valueOf(tmp);
+        pilih = 2;
+        tmp = "";
+        txtTampil.setText("-");
+    }//GEN-LAST:event_btnKurangActionPerformed
 
     /**
      * @param args the command line arguments
