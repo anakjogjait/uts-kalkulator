@@ -124,6 +124,11 @@ public class frmKalkulator extends javax.swing.JDialog {
         });
 
         btnKali.setText("x");
+        btnKali.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKaliActionPerformed(evt);
+            }
+        });
 
         btnNol.setText("0");
         btnNol.addActionListener(new java.awt.event.ActionListener() {
@@ -147,6 +152,11 @@ public class frmKalkulator extends javax.swing.JDialog {
         });
 
         btnBagi.setText(":");
+        btnBagi.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBagiActionPerformed(evt);
+            }
+        });
 
         btnPlusMinus.setText("+/-");
 
@@ -316,6 +326,20 @@ public class frmKalkulator extends javax.swing.JDialog {
         tmp = "";
         txtTampil.setText("-");
     }//GEN-LAST:event_btnKurangActionPerformed
+
+    private void btnKaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKaliActionPerformed
+        a1 = Float.valueOf(tmp);
+        pilih = 3;
+        tmp = "";
+        txtTampil.setText("x");
+    }//GEN-LAST:event_btnKaliActionPerformed
+
+    private void btnBagiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBagiActionPerformed
+        a1 = Float.valueOf(tmp);
+        pilih = 4;
+        tmp = "";
+        txtTampil.setText(":");
+    }//GEN-LAST:event_btnBagiActionPerformed
 
     /**
      * @param args the command line arguments

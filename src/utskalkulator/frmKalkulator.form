@@ -224,6 +224,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="x"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnKaliActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnNol">
       <Properties>
@@ -253,6 +256,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value=":"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBagiActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnPlusMinus">
       <Properties>
