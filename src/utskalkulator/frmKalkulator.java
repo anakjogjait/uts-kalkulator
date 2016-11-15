@@ -373,6 +373,10 @@ public class frmKalkulator extends javax.swing.JDialog {
                 txtTampil.setText(tmp);
                 break;
         }
+        tmp = "";
+        a1 = 0;
+        a2 = 0;
+        hasil = 0;
     }//GEN-LAST:event_btnSamaDenganActionPerformed
 
     /**
