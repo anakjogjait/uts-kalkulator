@@ -2,12 +2,12 @@ package utskalkulator;
 import javax.swing.JTextField;
 
 public class frmKalkulator extends javax.swing.JDialog {
-    private String tmp;
+    private String tmp = "";
     private int a1,a2;
     private float hasil;
     
     public frmKalkulator(java.awt.Frame parent, boolean modal) {
-        super(parent, modal);
+        super(parent, "KALKULATOR");
         initComponents();
         setLocationRelativeTo(null);
         txtTampil.setHorizontalAlignment(JTextField.CENTER);
@@ -45,7 +45,6 @@ public class frmKalkulator extends javax.swing.JDialog {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         txtTampil.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        txtTampil.setText("0");
 
         btnSatu.setText("1");
         btnSatu.addActionListener(new java.awt.event.ActionListener() {
@@ -94,10 +93,25 @@ public class frmKalkulator extends javax.swing.JDialog {
         btnKurang.setText("-");
 
         btnTujuh.setText("7");
+        btnTujuh.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTujuhActionPerformed(evt);
+            }
+        });
 
         btnDelapan.setText("8");
+        btnDelapan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDelapanActionPerformed(evt);
+            }
+        });
 
         btnSembilan.setText("9");
+        btnSembilan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSembilanActionPerformed(evt);
+            }
+        });
 
         btnKali.setText("x");
 
@@ -227,8 +241,24 @@ public class frmKalkulator extends javax.swing.JDialog {
     }//GEN-LAST:event_btnLimaActionPerformed
 
     private void btnEnamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnamActionPerformed
-        txt += "6";
+        tmp += "6";
+        txtTampil.setText(tmp);
     }//GEN-LAST:event_btnEnamActionPerformed
+
+    private void btnTujuhActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTujuhActionPerformed
+        tmp += "7";
+        txtTampil.setText(tmp);
+    }//GEN-LAST:event_btnTujuhActionPerformed
+
+    private void btnDelapanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDelapanActionPerformed
+        tmp += "8";
+        txtTampil.setText(tmp);
+    }//GEN-LAST:event_btnDelapanActionPerformed
+
+    private void btnSembilanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSembilanActionPerformed
+        tmp += "9";
+        txtTampil.setText(tmp);
+    }//GEN-LAST:event_btnSembilanActionPerformed
 
     /**
      * @param args the command line arguments
