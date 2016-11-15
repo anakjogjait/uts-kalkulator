@@ -48,10 +48,25 @@ public class frmKalkulator extends javax.swing.JDialog {
         txtTampil.setText("0");
 
         btnSatu.setText("1");
+        btnSatu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSatuActionPerformed(evt);
+            }
+        });
 
         btnDua.setText("2");
+        btnDua.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDuaActionPerformed(evt);
+            }
+        });
 
         btnTiga.setText("3");
+        btnTiga.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTigaActionPerformed(evt);
+            }
+        });
 
         btnTambah.setText("+");
 
@@ -170,6 +185,21 @@ public class frmKalkulator extends javax.swing.JDialog {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnSatuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSatuActionPerformed
+        tmp += "1";
+        txtTampil.setText(tmp);
+    }//GEN-LAST:event_btnSatuActionPerformed
+
+    private void btnDuaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDuaActionPerformed
+        tmp += "2";
+        txtTampil.setText(tmp);
+    }//GEN-LAST:event_btnDuaActionPerformed
+
+    private void btnTigaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTigaActionPerformed
+        tmp += "3";
+        txtTampil.setText(tmp);
+    }//GEN-LAST:event_btnTigaActionPerformed
 
     /**
      * @param args the command line arguments
