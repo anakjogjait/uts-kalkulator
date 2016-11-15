@@ -116,10 +116,25 @@ public class frmKalkulator extends javax.swing.JDialog {
         btnKali.setText("x");
 
         btnNol.setText("0");
+        btnNol.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNolActionPerformed(evt);
+            }
+        });
 
         btnKoma.setText(",");
+        btnKoma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKomaActionPerformed(evt);
+            }
+        });
 
         btnBersih.setText("c");
+        btnBersih.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBersihActionPerformed(evt);
+            }
+        });
 
         btnBagi.setText(":");
 
@@ -259,6 +274,23 @@ public class frmKalkulator extends javax.swing.JDialog {
         tmp += "9";
         txtTampil.setText(tmp);
     }//GEN-LAST:event_btnSembilanActionPerformed
+
+    private void btnNolActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNolActionPerformed
+        tmp += "0";
+        txtTampil.setText(tmp);
+    }//GEN-LAST:event_btnNolActionPerformed
+
+    private void btnKomaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKomaActionPerformed
+        tmp += ".";
+        txtTampil.setText(tmp);
+    }//GEN-LAST:event_btnKomaActionPerformed
+
+    private void btnBersihActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBersihActionPerformed
+        tmp = "";
+        a1=0;
+        a2=0;
+        hasil=0;
+    }//GEN-LAST:event_btnBersihActionPerformed
 
     /**
      * @param args the command line arguments
