@@ -1,5 +1,6 @@
 package utskalkulator;
 import javax.swing.JTextField;
+import javax.swing.JOptionPane;
 
 public class frmKalkulator extends javax.swing.JDialog {
     private String tmp = "";
@@ -159,6 +160,11 @@ public class frmKalkulator extends javax.swing.JDialog {
         });
 
         btnPlusMinus.setText("+/-");
+        btnPlusMinus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPlusMinusActionPerformed(evt);
+            }
+        });
 
         btnSamaDengan.setText("=");
         btnSamaDengan.addActionListener(new java.awt.event.ActionListener() {
@@ -376,8 +382,16 @@ public class frmKalkulator extends javax.swing.JDialog {
         tmp = "";
         a1 = 0;
         a2 = 0;
-        hasil = 0;
     }//GEN-LAST:event_btnSamaDenganActionPerformed
+
+    private void btnPlusMinusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPlusMinusActionPerformed
+        if (hasil == 0) {
+            JOptionPane.showMessageDialog(this, "Maaf hasil belum ada oprasi aritmatik yang terjadi");
+        } else {
+            hasil *= -1;
+            txtTampil.setText(String.valueOf(hasil));
+        }
+    }//GEN-LAST:event_btnPlusMinusActionPerformed
 
     /**
      * @param args the command line arguments
