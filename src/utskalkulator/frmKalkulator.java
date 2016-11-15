@@ -354,6 +354,12 @@ public class frmKalkulator extends javax.swing.JDialog {
                 tmp = String.valueOf(hasil);
                 txtTampil.setText(tmp);
                 break;
+            case 2:
+                a2 = Float.valueOf(tmp);
+                hasil = (float) a1 - a2;
+                tmp = String.valueOf(hasil);
+                txtTampil.setText(tmp);
+                break;
         }
     }//GEN-LAST:event_btnSamaDenganActionPerformed
 
